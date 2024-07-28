@@ -1,8 +1,16 @@
-import flet as ft
+from flet import *
 
+def main(page: Page):
+    page.horizontal_alignment = 'center'
+    page.vertical_alignment = 'center'
 
-def main(page: ft.Page):
-    page.add(ft.SafeArea(ft.Text("Hello, Flet!")))
+    _c = Container(
+        width=200,
+        height=500,
+        bgcolor='black'
+    )
 
+    page.add(_c)
 
-ft.app(main)
+if __name__ == '__main__':
+    app(target=main, assets_dir='assets')
